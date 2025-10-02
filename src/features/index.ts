@@ -1,3 +1,3 @@
-import Drawer from "./drawer/Drawer";
+import SearchBar from "./searchBar/SearchBar";
 
-export { Drawer };
+export { SearchBar };

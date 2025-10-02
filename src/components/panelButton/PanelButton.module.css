@@ -1,0 +1,22 @@
+.panelButton {
+  background: none;
+  border: none;
+  outline: none;
+  position: relative;
+  left: 0px;
+  transition: left 1s;
+}
+
+.panelButton:hover {
+  cursor: pointer;
+}
+
+/* Panel button appear to open drawer */
+.openPanelState {
+  left: 50px;
+}
+
+/* Panel button get back to its position when drawer is open */
+.closePanelState {
+  left: 0px;
+}

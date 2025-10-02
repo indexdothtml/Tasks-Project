@@ -1,0 +1,48 @@
+/* Website Name */
+.websiteName {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Website Name + Drawer Icon */
+.webNameIconParent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Drawer styles */
+.drawerBackgroud {
+  width: 280px;
+  height: 100vh;
+  background-color: var(--background-color);
+  padding: 10px;
+  border-radius: 15px;
+  margin-left: -300px;
+  transition: margin-left 1s;
+}
+
+/* Opening drawer transition */
+.openDrawer {
+  margin-left: 0px;
+}
+
+/* Closing drawer transition */
+.closeDrawer {
+  margin-left: -300px;
+}
+
+/* Utility */
+.flex {
+  display: flex;
+}
+
+.justifyContentCenter {
+  justify-content: center;
+}
+
+.alignItemCenter {
+  align-items: center;
+}
+
+/* Animations keyframe */
