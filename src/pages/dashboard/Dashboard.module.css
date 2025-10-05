@@ -1,4 +1,19 @@
+/* Dashboard page */
 .dashboard {
   display: flex;
   padding: 10px;
+}
+
+/* Main View which is at center of both panels */
+.mainView {
+  flex: 1;
+  padding: 0px 48px;
+}
+
+/* Main view header/title */
+.mainViewHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
 }
