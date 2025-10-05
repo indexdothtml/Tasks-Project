@@ -1,0 +1,17 @@
+/* Category */
+.categoryList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Category title */
+.title {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* List items */
+.listItems {
+  max-height: 180px;
+}

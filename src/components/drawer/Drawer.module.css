@@ -20,6 +20,10 @@
   border-radius: 15px;
   margin-left: -300px;
   transition: margin-left 1s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 /* Opening drawer transition */
@@ -45,4 +49,9 @@
   align-items: center;
 }
 
-/* Animations keyframe */
+/* Navigation buttons like sign out and settings */
+.navigationButtons {
+  position: absolute;
+  bottom: 4px;
+  width: 16.2em;
+}

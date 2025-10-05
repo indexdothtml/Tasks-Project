@@ -1,7 +1,13 @@
+import {
+  LogOut,
+  SlidersHorizontal,
+  ListTodo,
+  ChevronsRight,
+} from "lucide-react";
 import { useState } from "react";
 
 import { SearchBar } from "../../features/index";
-import { PanelButton } from "../index";
+import { IconTextButton, ListItem, CategoryList, PanelButton } from "../index";
 import classes from "./Drawer.module.css";
 
 export default function Drawer() {
@@ -26,6 +32,41 @@ export default function Drawer() {
       </div>
 
       <SearchBar />
+
+      <CategoryList title="TASKS">
+        <ListItem Icon={ChevronsRight} name="Upcoming" count={12} />
+        <ListItem Icon={ListTodo} name="Today" count={5} />
+      </CategoryList>
+
+      <CategoryList title="LISTS" dynamicList={true}>
+        <ListItem
+          name="Personal"
+          count={12}
+          dynamicListIcon={true}
+          iconFillColor="#5c7cfa"
+        />
+        <ListItem
+          name="Work"
+          count={5}
+          dynamicListIcon={true}
+          iconFillColor="#66d9e8"
+        />
+        <ListItem
+          name="List 1"
+          count={5}
+          dynamicListIcon={true}
+          iconFillColor="#8ce99a"
+        />
+      </CategoryList>
+
+      <div className={classes.navigationButtons}>
+        <IconTextButton
+          Icon={SlidersHorizontal}
+          text="Settings"
+          classNames=""
+        />
+        <IconTextButton Icon={LogOut} text="Sign out" />
+      </div>
     </nav>
   );
 }

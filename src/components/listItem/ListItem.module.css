@@ -1,0 +1,39 @@
+/* List item */
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+/* List item hover */
+.listItem:hover {
+  background-color: var(--background-color-2);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* List item name and task count indicator parent */
+.listNameIndicator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Task count indicator */
+.taskCountIndicator {
+  background-color: var(--background-color-2);
+  padding: 4px;
+  width: 30px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Task itam count indicator hover effect */
+.listItem:hover .taskCountIndicator {
+  background-color: white;
+}

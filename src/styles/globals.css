@@ -5,6 +5,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* Fonts */
@@ -60,6 +61,7 @@
 
 :root {
   --background-color: #f4f4f4;
+  --background-color-2: #ebebeb;
   --border-color: #ebebeb;
   --icon-color: #7c7c7c;
 }

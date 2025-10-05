@@ -1,0 +1,19 @@
+/* Icon text button */
+.iconTextButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 8px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+/* Icon text button hover effect */
+.iconTextButton:hover {
+  cursor: pointer;
+  background-color: var(--background-color-2);
+  font-weight: 500;
+}
