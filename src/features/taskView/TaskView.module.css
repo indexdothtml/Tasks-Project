@@ -1,0 +1,15 @@
+/* Add task button */
+.addTaskButton {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+/* Overriding default background-color property of IconTextButton */
+.noBackgroundColorOnHover:hover {
+  background-color: transparent;
+}
+
+/* Task list */
+.taskViewList {
+  height: 80vh;
+}
