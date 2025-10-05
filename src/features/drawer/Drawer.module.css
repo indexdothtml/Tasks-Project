@@ -1,11 +1,11 @@
-/* Website Name */
-.websiteName {
+/* Header/Title */
+.header {
   font-size: 20px;
   font-weight: 500;
 }
 
-/* Website Name + Drawer Icon */
-.webNameIconParent {
+/* Drawer header */
+.drawerHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;

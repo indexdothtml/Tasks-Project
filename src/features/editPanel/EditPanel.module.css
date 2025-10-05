@@ -1,0 +1,33 @@
+/* Edit panel */
+.editPanel {
+  width: 280px;
+  height: 100vh;
+  background-color: var(--background-color);
+  padding: 10px;
+  border-radius: 15px;
+  margin-right: -300px;
+  transition: margin-right 1s;
+}
+
+/* Defines transition of open panel */
+.openPanel {
+  margin-right: 0px;
+}
+
+/* Defines transition of close panel */
+.closePanel {
+  margin-right: -300px;
+}
+
+/* Edit panel header */
+.editPanelHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Header/Title */
+.header {
+  font-size: 20px;
+  font-weight: 500;
+}

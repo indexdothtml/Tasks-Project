@@ -1,4 +1,6 @@
 import {
+  PanelLeftOpen,
+  PanelLeftClose,
   LogOut,
   SlidersHorizontal,
   ListTodo,
@@ -28,10 +30,12 @@ export default function Drawer() {
         toggleDrawer ? classes.openDrawer : classes.closeDrawer
       }`}
     >
-      <div className={classes.webNameIconParent}>
-        <span className={classes.websiteName}>Menu</span>
+      <div className={classes.drawerHeader}>
+        <span className={classes.header}>Menu</span>
         <PanelButton
-          togglePanelButton={toggleDrawer}
+          IconOnOpen={PanelLeftClose}
+          IconOnClose={PanelLeftOpen}
+          isPanelOpen={toggleDrawer}
           onClick={handleToggleDrawer}
         />
       </div>
