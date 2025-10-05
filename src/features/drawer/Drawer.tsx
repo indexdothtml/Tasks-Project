@@ -6,8 +6,13 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 
-import { SearchBar } from "../../features/index";
-import { IconTextButton, ListItem, CategoryList, PanelButton } from "../index";
+import { SearchBar } from "../index";
+import {
+  IconTextButton,
+  ListItem,
+  CategoryList,
+  PanelButton,
+} from "../../components/index";
 import classes from "./Drawer.module.css";
 
 export default function Drawer() {
