@@ -6,8 +6,10 @@ import DividerLine from "./dividerLine/DividerLine";
 import IconTextButton from "./iconTextButton/IconTextButton";
 import TaskItem from "./taskItem/TaskItem";
 import DividerLineVertical from "./dividerLine/DividerLineVertical";
+import TextButton from "./textButton/TextButton";
 
 export {
+  TextButton,
   DividerLineVertical,
   TaskItem,
   IconTextButton,

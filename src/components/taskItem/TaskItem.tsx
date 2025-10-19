@@ -1,5 +1,6 @@
 import { ChevronRight, Squircle, CalendarX, Calendar } from "lucide-react";
 
+import { formatDateToLocal } from "../../utils/dateFormats";
 import { DividerLine, DividerLineVertical } from "../index";
 import { type ColorPalets } from "../../types/common";
 import classes from "./TaskItem.module.css";
@@ -14,6 +15,7 @@ type TaskItemProps = {
   createdOn: string;
   dueDateOn: string;
   type: Type;
+  completed: boolean;
 };
 
 export default function TaskItem({
@@ -21,24 +23,25 @@ export default function TaskItem({
   createdOn,
   dueDateOn,
   type,
+  completed,
 }: TaskItemProps) {
   return (
     <>
       <div className={classes.taskItem}>
         <div>
-          <input type="checkbox" />
+          <input type="checkbox" checked={completed} />
         </div>
         <div className={classes.taskItemData}>
           <div>{title}</div>
           <div className={classes.taskMetaData}>
             <div className={classes.data}>
               <Calendar size={18} strokeWidth={3} color="var(--icon-color)" />{" "}
-              <span>{createdOn}</span>
+              <span>{formatDateToLocal(createdOn)}</span>
             </div>
             <DividerLineVertical />
             <div className={classes.data}>
               <CalendarX size={18} strokeWidth={3} color="var(--icon-color)" />{" "}
-              <span>{dueDateOn}</span>
+              <span>{formatDateToLocal(dueDateOn)}</span>
             </div>
             <DividerLineVertical />
             <div className={classes.data}>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { X } from "lucide-react";
 
+import { TaskHandlingForm } from "../index";
 import { PanelButton } from "../../components/index";
 import classes from "./EditPanel.module.css";
 
@@ -38,6 +39,7 @@ export default function EditPanel({ openPanel = false }: EditPanelProps) {
           onClick={handleTogglePanel}
         />
       </div>
+      <TaskHandlingForm />
     </div>
   );
 }

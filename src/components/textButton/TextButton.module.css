@@ -1,0 +1,14 @@
+.textButton {
+  padding: 8px;
+  width: 120px;
+  border: 1px solid var(--border-color);
+  background-color: var(--background-color-2);
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 500;
+}
+
+.textButton:hover {
+  background-color: var(--background-color);
+}
