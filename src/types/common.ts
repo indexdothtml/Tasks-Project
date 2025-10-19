@@ -7,3 +7,17 @@ export type ColorPalets =
   | "#8ce99a"
   | "#ffd43b"
   | "#ff922b";
+
+export type Task = {
+  id: string;
+  userId: string;
+  title: string;
+  description: string;
+  createdOn: string;
+  dueDateOn: string;
+  listType: {
+    typeName: string;
+    color: ColorPalets;
+  };
+  completed: boolean;
+};

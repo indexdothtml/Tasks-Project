@@ -1,10 +1,48 @@
+import { useState, useEffect, type ReactNode } from "react";
 import { OverlayScrollbarsComponent } from "overlayscrollbars-react";
 import { Plus } from "lucide-react";
 
+import { type Task } from "../../types/common";
+import { getAllTasks } from "../../services/taskServices";
 import { TaskItem, IconTextButton } from "../../components/index";
 import classes from "./TaskView.module.css";
 
 export default function TaskView() {
+  const [tasks, setTasks] = useState<Task[] | null>(null);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    (async function () {
+      const result = await getAllTasks();
+      if (result.success) {
+        setTasks(result.data);
+        setError("");
+      } else {
+        setTasks(null);
+        setError(result.message);
+      }
+    })();
+  }, []);
+
+  let taskView: ReactNode;
+
+  if (error !== "") {
+    taskView = <div>Error {error}</div>;
+  } else if (tasks && tasks.length !== 0) {
+    taskView = tasks.map((task) => (
+      <TaskItem
+        key={task.id}
+        title={task.title}
+        createdOn={task.createdOn}
+        dueDateOn={task.dueDateOn}
+        type={{ typeName: task.listType.typeName, color: task.listType.color }}
+        completed={task.completed}
+      />
+    ));
+  } else {
+    taskView = <div>No Tasks Found!</div>;
+  }
+
   return (
     <>
       <div className={classes.addTaskButton}>
@@ -24,26 +62,7 @@ export default function TaskView() {
           }}
           style={{ height: "inherit" }}
         >
-          <TaskItem
-            title="This is my first task"
-            createdOn="05-10-2025"
-            dueDateOn="10-10-2025"
-            type={{ typeName: "Personal", color: "#66d9e8" }}
-          />
-
-          <TaskItem
-            title="This is my first task"
-            createdOn="05-10-2025"
-            dueDateOn="10-10-2025"
-            type={{ typeName: "Personal", color: "#66d9e8" }}
-          />
-
-          <TaskItem
-            title="This is my first task"
-            createdOn="05-10-2025"
-            dueDateOn="10-10-2025"
-            type={{ typeName: "Personal", color: "#66d9e8" }}
-          />
+          {taskView}
         </OverlayScrollbarsComponent>
       </div>
     </>
